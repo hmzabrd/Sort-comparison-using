@@ -1,0 +1,15 @@
+# Ignore everything by default.
+*
+
+# Allow directories so the allowlisted files can be reached.
+!*/
+
+# Project source and build configuration.
+!.gitignore
+!Makefile
+!benchmark.c
+!generate.c
+!generate.h
+!sort.c
+!sort.h
+!plot.gnu
