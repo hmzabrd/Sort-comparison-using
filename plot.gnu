@@ -71,15 +71,9 @@ set datafile missing "0.000"
 
 set output "graph_all_sorts.png"
 set title "Comparaison des 6 tris (echelle logarithmique)"
-plot "bubble_sort.dat"    using 1:2 with points pt 7 ps 1.2 lc rgb "red"    notitle, \
-     "bubble_sort.dat"    using 1:2 smooth acsplines with lines lw 2 lc rgb "red"    title "tri a bulles", \
-     "insertion_sort.dat" using 1:2 with points pt 7 ps 1.2 lc rgb "green"  notitle, \
-     "insertion_sort.dat" using 1:2 smooth acsplines with lines lw 2 lc rgb "green"  title "tri par insertion", \
-     "selection_sort.dat" using 1:2 with points pt 7 ps 1.2 lc rgb "blue"   notitle, \
-     "selection_sort.dat" using 1:2 smooth acsplines with lines lw 2 lc rgb "blue"   title "tri par selection", \
-     "quick_sort.dat"     using 1:2 with points pt 7 ps 1.2 lc rgb "orange" notitle, \
-     "quick_sort.dat"     using 1:2 smooth acsplines with lines lw 2 lc rgb "orange" title "tri rapide", \
-     "merge_sort.dat"     using 1:2 with points pt 7 ps 1.2 lc rgb "purple" notitle, \
-     "merge_sort.dat"     using 1:2 smooth acsplines with lines lw 2 lc rgb "purple" title "tri fusion", \
-     "heap_sort.dat"      using 1:2 with points pt 7 ps 1.2 lc rgb "brown"  notitle, \
-     "heap_sort.dat"      using 1:2 smooth acsplines with lines lw 2 lc rgb "brown"  title "tri par tas"
+plot "bubble_sort.dat"    using 1:2 with linespoints lw 2 pt 7 ps 1.2 lc rgb "red"    title "tri a bulles", \
+     "insertion_sort.dat" using 1:2 with linespoints lw 2 pt 7 ps 1.2 lc rgb "green"  title "tri par insertion", \
+     "selection_sort.dat" using 1:2 with linespoints lw 2 pt 7 ps 1.2 lc rgb "blue"   title "tri par selection", \
+     "quick_sort.dat"     using 1:2 with linespoints lw 2 pt 7 ps 1.2 lc rgb "orange" title "tri rapide", \
+     "merge_sort.dat"     using 1:2 with linespoints lw 2 pt 7 ps 1.2 lc rgb "purple" title "tri fusion", \
+     "heap_sort.dat"      using 1:2 with linespoints lw 2 pt 7 ps 1.2 lc rgb "brown"  title "tri par tas"
